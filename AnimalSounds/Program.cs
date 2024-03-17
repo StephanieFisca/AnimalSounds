@@ -24,17 +24,27 @@ namespace AnimalSoundsOOP
         }
     }
 
-    class Program
+    // AnimalSoundGenerator class to generate animal sounds
+    class AnimalSoundGenerator
     {
-        static void Main(string[] args)
+        // Method to generate a list of Animal objects with predefined sounds
+        public static List<Animal> GenerateAnimalSounds()
         {
-            // Create a list of Animal objects
-            List<Animal> animals = new List<Animal>
+            return new List<Animal>
             {
                 new Animal("Dog", "Bark"),
                 new Animal("Cat", "Meow"),
                 new Animal("Elephant", "Trumpet")
             };
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Get the list of animals with sounds
+            List<Animal> animals = AnimalSoundGenerator.GenerateAnimalSounds();
 
             // Iterate through the list of animals and make each animal sound
             foreach (var animal in animals)

@@ -35,6 +35,13 @@ namespace AnimalSoundsOOP
                 new Animal("Dog", "Bark"),
                 new Animal("Cat", "Meow"),
                 new Animal("Elephant", "Trumpet")
+                new Animal("Cow ", "Moo")
+                new Animal("Horse", "Neigh")
+                new Animal("Duck", "Quack")
+                new Animal("Lion", "Roar")
+                new Animal("Sheep", "Baa")
+                new Animal("Snake", "Ssss")
+                
             };
         }
     }

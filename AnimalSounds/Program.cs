@@ -10,7 +10,8 @@ namespace AnimalSounds
         public string Type { get; }
         public string Sound { get; }
 
-        // Constructor to initialize Type and Sound of the animal
+        /*Constructor with parameters that initialises the type and sound
+        of an animal */
         public Animal(string type, string sound)
         {
             Type = type;
@@ -22,21 +23,34 @@ namespace AnimalSounds
         {
             Console.WriteLine($"{Type} makes sound: {Sound}");
         }
+
+    }
+
+    // MatchSoundToAnimal class to generate animal sounds
+    class MatchSoundToAnimal
+    {
+        //Generates the sound an animal makes
+        public static List<Animal> GenerateAnimalSounds()
+        {
+            return new List<Animal>
+            {
+                new Animal("Dog", "Bark"),
+                new Animal("Snake", "Ssss"),
+                new Animal("Horse", "Neigh"),
+                new Animal("Cat", "Meow"),
+                new Animal("Hyena", "Laugh")
+            };
+        }
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            // Create a list of Animal objects
-            List<Animal> animals = new List<Animal>
-            {
-                new Animal("Dog", "Bark"),
-                new Animal("Snake", "Ssss"),
-                new Animal("Horse", "Neigh")
-            };
+            // Get the list of animals with sounds
+            List<Animal> animals = MatchSoundToAnimal.GenerateAnimalSounds();
 
-            // Iterate through the list of animals and make each animal sound
+            // Iterate through all animals and generates their corresponding sound
             foreach (var animal in animals)
             {
                 animal.MakeSound();

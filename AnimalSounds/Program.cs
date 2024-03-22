@@ -24,17 +24,29 @@ namespace AnimalSounds
         }
     }
 
+    /* MatchSoundToAnimal class to generate animal sounds */
+    class MatchSoundToAnimal
+    {
+        /* Generates the sound an animal makes */
+        public static List<Animal> GenerateAnimalSounds()
+        {
+            return new List<Animal>
+            {
+                new Animal("Dog", "Bark"),
+                new Animal("Snake", "Ssss"),
+                new Animal("Horse", "Neigh"),
+                new Animal("Cat", "Meow"),
+                new Animal("Hyena", "Laugh")
+            };
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            /* Create list of animals and their sounds */
-            List<Animal> animals = new List<Animal>
-            {
-                new Animal("Dog", "Bark"),
-                new Animal("Cat", "Meow"),
-                new Animal("Elephant", "Trumpet")
-            };
+            /* Get list of animals and their sounds */
+            List<Animal> animals = MatchSoundToAnimal.GenerateAnimalSounds();
 
             /* Iterate through each animal and make the corresponding sound */
             foreach (var animal in animals)
@@ -43,6 +55,7 @@ namespace AnimalSounds
             }
 
             Console.ReadLine();
+
         }
     }
 }

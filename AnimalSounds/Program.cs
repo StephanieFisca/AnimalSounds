@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AnimalSoundsOOP
+namespace AnimalSounds
 {
-    // Animal class representing each animal
+    // Animal class
     class Animal
     {
         // Properties
@@ -33,15 +33,9 @@ namespace AnimalSoundsOOP
             return new List<Animal>
             {
                 new Animal("Dog", "Bark"),
-                new Animal("Cat", "Meow"),
-                new Animal("Elephant", "Trumpet")
-                new Animal("Cow ", "Moo")
+                new Animal("Snake", "Ssss"),
                 new Animal("Horse", "Neigh")
-                new Animal("Duck", "Quack")
-                new Animal("Lion", "Roar")
-                new Animal("Sheep", "Baa")
-                new Animal("Snake", "Ssss")
-                
+
             };
         }
     }
